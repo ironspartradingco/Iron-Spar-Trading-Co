@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iron Spar Real Estate</title>
+    <style>
+        :root {
+            --primary: #1a1a1a;
+            --secondary: #d4af37;
+            --accent: #4a4a4a;
+            --text: #e0e0e0;
+            --shadow: rgba(0,0,0,0.5);
+        }
+        @import url('https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&display=swap');
+        * { margin:0; padding:0; box-sizing:border-box; }
+        body { font-family: 'Cinzel', serif; color: var(--text); background: var(--primary); line-height:1.6; }
+        nav { background: var(--accent); padding: 1rem; text-align:center; position:sticky; top:0; z-index:100; }
+        nav a { color: var(--text); margin: 0 1.5rem; text-decoration:none; font-size:1.1rem; transition:0.3s; }
+        nav a:hover { color: var(--secondary); }
+        header { background: linear-gradient(to bottom, var(--primary), var(--accent)); text-align:center; padding:6rem 2rem; position:relative; }
+        header::before { content:""; position:absolute; top:0; left:0; width:100%; height:100%; background:url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"%3E%3Cpath d="M50 0L0 50L50 100L100 50Z" fill="%234a4a4a" opacity="0.1"/%3E%3C/svg%3E') repeat; opacity:0.3; }
+        .logo { width:150px; height:150px; margin:0 auto 2rem; }
+        h1 { font-size:3.5rem; text-shadow:0 2px 4px var(--shadow); }
+        header p { font-size:1.3rem; opacity:0.8; max-width:800px; margin:2rem auto; }
+        main { max-width:1200px; margin:0 auto; padding:4rem 2rem; display:grid; grid-template-columns:repeat(auto-fit,minmax(300px,1fr)); gap:3rem; }
+        section { background:var(--accent); padding:3rem 2rem; border-radius:12px; box-shadow:0 10px 30px var(--shadow); text-align:center; transition:0.3s; }
+        section:hover { transform:translateY(-10px); }
+        .btn { display:inline-block; background:var(--secondary); color:var(--primary); padding:1rem 2rem; border-radius:50px; text-decoration:none; margin-top:2rem; font-weight:bold; transition:0.3s; }
+        .btn:hover { background:#b8962e; transform:scale(1.05); }
+        footer { text-align:center; padding:3rem; background:var(--primary); border-top:1px solid var(--accent); opacity:0.7; }
+        @media (max-width:768px) { nav a { display:block; margin:0.5rem 0; } main { grid-template-columns:1fr; } }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="pralle-realty.html">Pralle Realty</a>
+        <a href="wizmar-investments.html">Wizmar Investments</a>
+        <a href="athena-lending.html">Athena Lending</a>
+    </nav>
+
+    <header>
+        <svg class="logo" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+            <!-- Iron Spar Parent Logo (adapted from first approved design) -->
+            <path d="M50 20 L30 40 L70 40 Z" fill="none" stroke="#d4af37" stroke-width="5"/>
+            <rect x="35" y="40" width="30" height="40" fill="none" stroke="#d4af37" stroke-width="5"/>
+            <path d="M52 45 Q45 55 52 65 Q58 55 52 45" fill="#d4af37"/>
+            <circle cx="50" cy="75" r="8" fill="#1a1a1a" stroke="#d4af37" stroke-width="3"/>
+            <path d="M50 75 L50 85 M45 85 L55 85" stroke="#d4af37" stroke-width="3"/>
+            <text x="50" y="95" font-size="12" text-anchor="middle" fill="#d4af37">ISR</text>
+        </svg>
+        <h1>Iron Spar Real Estate</h1>
+        <p>Elegance forged in strength. Discover sophisticated real estate opportunities through our specialized subsidiaries — crafted for agents, investors, and visionaries.</p>
+    </header>
+
+    <main>
+        <section>
+            <h2>Pralle Realty</h2>
+            <p>For licensed agents: Expertly buy and sell real estate with precision and insight.</p>
+            <a href="pralle-realty.html" class="btn">Explore Pralle Realty</a>
+        </section>
+        <section>
+            <h2>Wizmar Investments</h2>
+            <p>Strategic investing and syndication for discerning real estate investors.</p>
+            <a href="wizmar-investments.html" class="btn">Explore Investments</a>
+        </section>
+        <section>
+            <h2>Athena Lending</h2>
+            <p>Intelligent financing for business-purpose real estate loans.</p>
+            <a href="athena-lending.html" class="btn">Secure Financing</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2025 Iron Spar Real Estate. All rights reserved.</p>
+    </footer>
+</body>
+</html>

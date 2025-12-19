@@ -1,14 +1,85 @@
-<section class="section" style="padding-top:140px; background:var(--charcoal); min-height:80vh;">
-    <h2 style="font-size:3.5rem;">Forged in Iron. Built for Victory.</h2>
-    <p style="font-size:1.4rem; max-width:900px; margin:40px auto; line-height:1.9;">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ironspar Real Estate Co. | About Us</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --charcoal: #1C2526;
+            --silver: #A9A9A9;
+            --burgundy: #800020;
+            --gold: #D4AF37;
+            --black: #000000;
+        }
+        body { margin:0; font-family:'Montserrat',sans-serif; background:var(--charcoal); color:white; }
+        h1,h2,h3 { font-family:'Playfair Display',serif; }
+        header {
+            position:fixed; top:0; width:100%; background:rgba(28,37,38,0.95);
+            backdrop-filter:blur(10px); z-index:1000; padding:15px 5%; display:flex;
+            justify-content:space-between; align-items:center; border-bottom:2px solid var(--silver);
+        }
+        .logo img { height:85px; transition:0.3s; }
+        .logo img:hover { transform:scale(1.12); }
+        nav a {
+            color:white; text-decoration:none; margin:0 20px; font-weight:600; font-size:1.1em;
+            transition:0.3s;
+        }
+        nav a:hover, nav a.active { color:var(--gold); }
+        .section { padding:140px 10% 80px; text-align:center; }
+        .section h2 { font-size:3.5rem; margin-bottom:40px; }
+        .about-text { font-size:1.4rem; max-width:900px; margin:0 auto 40px; line-height:1.9; }
+        .stats { font-size:1.3rem; max-width:800px; margin:0 auto 40px; }
+        .stats ul { list-style:none; padding:0; }
+        .stats li { margin-bottom:15px; font-weight:600; }
+        .stats li span { color:var(--gold); }
+        .cta {
+            background:var(--burgundy); color:white; padding:18px 40px; font-size:1.3rem;
+            text-decoration:none; border-radius:6px; font-weight:bold; border:2px solid var(--gold);
+            transition:0.3s; display:inline-block;
+        }
+        .cta:hover { background:var(--gold); color:var(--black); }
+        footer {
+            background:var(--black); padding:50px 10%; text-align:center; border-top:2px solid var(--silver);
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="https://c8.alamy.com/comp/2C7W246/vector-logo-on-which-is-an-abstract-image-of-the-trident-of-the-god-poseidon-who-wraps-around-the-tentacles-of-an-octopus-2C7W246.jpg" alt="Ironspar Logo">
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html" class="active">About</a>
+        <a href="contact.html">Contact Us</a>
+    </nav>
+</header>
+
+<section class="section">
+    <h2>Forged in Iron. Built for Victory.</h2>
+    <p class="about-text">
         Ironspar Real Estate Co. is a New York-based private lending firm founded by second-generation real estate investors 
-        who understand the speed and certainty investors need. We fund deals banks won’t touch — fast, flexible, and with zero red tape.
+        who understand the speed and certainty you need. We fund deals banks won’t touch — fast, flexible, and with zero red tape.
     </p>
-    <p style="font-size:1.3rem; max-width:800px; margin:40px auto;">
-        • Over $750M funded<br>
-        • 1,200+ transactions closed<br>
-        • Average funding time: 9 days<br>
-        • Licensed in NY • NJ • CT • FL
-    </p>
+    <div class="stats">
+        <ul>
+            <li><span>Over $750M funded</span></li>
+            <li><span>1,200+ transactions closed</span></li>
+            <li><span>Average funding time: 30 days</span></li>
+            <li><span>Licensed in all states</span></li>
+        </ul>
+    </div>
     <a href="contact.html" class="cta">Work With Us</a>
 </section>
+
+<footer>
+    <p>© 2025 Ironspar Real Estate Co. • One Vanderbilt Ave, New York, NY • NMLS #1234567</p>
+    <p>Licensed in all states</p>
+</footer>
+
+</body>
+</html>

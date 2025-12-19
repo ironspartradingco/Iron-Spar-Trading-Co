@@ -38,9 +38,15 @@
         .cta {
             background:var(--burgundy); color:white; padding:18px 40px; font-size:1.3rem;
             text-decoration:none; border-radius:6px; font-weight:bold; border:2px solid var(--gold);
-            transition:0.3s;
+            transition:0.3s; display:inline-block; margin:15px;
         }
         .cta:hover { background:var(--gold); color:var(--black); }
+        .consultation-section {
+            padding:80px 10%; text-align:center; background:var(--charcoal);
+        }
+        .slogan {
+            font-style:italic; font-size:1.4rem; max-width:900px; margin:30px auto; line-height:1.6;
+        }
         .section { padding:120px 10% 80px; text-align:center; }
         .section h2 { font-size:3rem; margin-bottom:30px; }
         footer {
@@ -73,6 +79,60 @@
     </div>
 </section>
 
+<!-- New Consultation Section with Pay Now Button -->
+<!-- Consultation Section - Shown as Sold Out but Payment Still Available -->
+<section class="consultation-section">
+    <h2 style="font-size:3rem;">Expert Consultation for Beginners</h2>
+    <p class="slogan">
+        For beginners, don't get ripped off by a general contractor. 
+        Consult a general. Make sure your investment philosophy is sound.
+    </p>
+
+    <!-- Sold Out Notice -->
+    <div style="position:relative; display:inline-block; margin:30px 0;">
+        <div style="
+            position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
+            background:rgba(128,0,32,0.9); color:white; padding:12px 40px;
+            font-size:1.8rem; font-weight:bold; border:3px solid var(--gold);
+            border-radius:8px; z-index:10; text-transform:uppercase;
+        ">
+            Sold Out
+        </div>
+        <div style="opacity:0.4; pointer-events:none;">
+            <!-- Dummy button to create the faded background effect -->
+            <button class="cta" style="font-size:1.5rem; padding:20px 50px; visibility:hidden;">
+                Pay Now – $2,500 Consultation
+            </button>
+        </div>
+    </div>
+
+    <p style="font-size:1.4rem; max-width:800px; margin:30px auto; opacity:0.9;">
+        <strong>Current consultation slots are fully booked.</strong><br>
+        High demand has led to all beginner consultation sessions being sold out at this time.<br><br>
+        <em>Payment is still available for serious investors on a waitlist or by special arrangement.</em>
+    </p>
+
+    <!-- PayPal Pay Now Button - Still Fully Functional -->
+    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+        <input type="hidden" name="cmd" value="_s-xclick">
+        <input type="hidden" name="hosted_button_id" value="REPLACE_WITH_YOUR_BUTTON_ID">
+        <input type="hidden" name="currency_code" value="USD">
+        <input type="hidden" name="amount" value="2500.00">
+        <input type="hidden" name="item_name" value="Real Estate Consultation Fee (Waitlist / Special Access)">
+
+        <input type="hidden" name="return" value="https://ironspar.com/thank-you.html">
+        <input type="hidden" name="cancel_return" value="https://ironspar.com/">
+
+        <button type="submit" class="cta" style="font-size:1.5rem; padding:20px 50px; background:var(--gold); color:var(--black); border:2px solid var(--gold);">
+            Secure Waitlist Spot – Pay $2,500 Now
+        </button>
+    </form>
+
+    <p style="font-size:1.1rem; margin-top:25px; opacity:0.8;">
+        Payment confirms priority access when new slots open or for expedited private review.
+    </p>
+</section>
+
 <section class="section" style="background:var(--charcoal);">
     <h2>Capital Forged for Victory</h2>
     <p style="font-size:1.3rem; max-width:900px; margin:0 auto; line-height:1.8;">
@@ -87,5 +147,6 @@
     <p>© 2025 Ironspar Real Estate Co. • One Vanderbilt Ave, New York, NY • NMLS #1234567</p>
     <p>Licensed in NY • NJ • CT • FL</p>
 </footer>
+
 </body>
 </html>

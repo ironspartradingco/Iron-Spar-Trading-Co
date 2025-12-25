@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ironspar Real Estate Co. | Private Lending for Investors</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <!-- PayPal SDK -->
+    <script src="https://www.paypal.com/sdk/js?client-id=BAAxQ7ykg-LCkTudUhy5ew9YnJSdV6-241CczSvL2qis1fVP9_FPiL3jnJRvv7c--gKwJhiHzvanwkaoD0&components=hosted-buttons&enable-funding=venmo&currency=USD"></script>
     <style>
         :root {
             --charcoal: #1C2526;
@@ -58,7 +60,7 @@
 
 <header>
     <div class="logo">
-        <img src="https://c8.alamy.com/comp/2C7W246/vector-logo-on-which-is-an-abstract-image-of-the-trident-of-the-god-poseidon-who-wraps-around-the-tentacles-of-an-octopus-2C7W246.jpg" alt="Ironspar Logo">
+        <img src="https://example.com/ironspar-logo.png" alt="Ironspar Logo">
     </div>
     <nav>
         <a href="index.html" class="active">Home</a>
@@ -79,8 +81,7 @@
     </div>
 </section>
 
-<!-- New Consultation Section with Pay Now Button -->
-<!-- Consultation Section - Shown as Sold Out but Payment Still Available -->
+<!-- Consultation Section -->
 <section class="consultation-section">
     <h2 style="font-size:3rem;">Expert Consultation for Beginners</h2>
     <p class="slogan">
@@ -99,10 +100,9 @@
             Sold Out
         </div>
         <div style="opacity:0.4; pointer-events:none;">
-            <!-- Dummy button to create the faded background effect -->
-            <button class="cta" style="font-size:1.5rem; padding:20px 50px; visibility:hidden;">
+            <div class="cta" style="font-size:1.5rem; padding:20px 50px; visibility:hidden;">
                 Pay Now – $2,500 Consultation
-            </button>
+            </div>
         </div>
     </div>
 
@@ -112,21 +112,8 @@
         <em>Payment is still available for serious investors on a waitlist or by special arrangement.</em>
     </p>
 
-    <!-- PayPal Pay Now Button - Still Fully Functional -->
-    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
-        <input type="hidden" name="cmd" value="_s-xclick">
-        <input type="hidden" name="hosted_button_id" value="REPLACE_WITH_YOUR_BUTTON_ID">
-        <input type="hidden" name="currency_code" value="USD">
-        <input type="hidden" name="amount" value="2500.00">
-        <input type="hidden" name="item_name" value="Real Estate Consultation Fee (Waitlist / Special Access)">
-
-        <input type="hidden" name="return" value="https://ironspar.com/thank-you.html">
-        <input type="hidden" name="cancel_return" value="https://ironspar.com/">
-
-        <button type="submit" class="cta" style="font-size:1.5rem; padding:20px 50px; background:var(--gold); color:var(--black); border:2px solid var(--gold);">
-            Secure Waitlist Spot – Pay $2,500 Now
-        </button>
-    </form>
+    <!-- Real PayPal Button -->
+    <div id="paypal-container-6BS7P4KW5NS2L"></div>
 
     <p style="font-size:1.1rem; margin-top:25px; opacity:0.8;">
         Payment confirms priority access when new slots open or for expedited private review.
@@ -144,9 +131,15 @@
 </section>
 
 <footer>
-    <p>© 2025 Ironspar Real Estate Co. • One Vanderbilt Ave, New York, NY • NMLS #1234567</p>
-    <p>Licensed in NY • NJ • CT • FL</p>
+    <p>© 2025 Ironspar Real Estate Co. • 17 Briar Brae Road, Darien, CT 06820 • (860) 381-7247</p>
+    <p>Licensed in all states except Alaska</p>
 </footer>
+
+<script>
+  paypal.HostedButtons({
+    hostedButtonId: "6BS7P4KW5NS2L",
+  }).render("#paypal-container-6BS7P4KW5NS2L");
+</script>
 
 </body>
 </html>

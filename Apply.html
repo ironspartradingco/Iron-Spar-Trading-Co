@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ironspar Real Estate Co. | Loan Application</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --charcoal: #1C2526;
+            --silver: #A9A9A9;
+            --burgundy: #800020;
+            --gold: #D4AF37;
+            --black: #000000;
+        }
+        body { margin:0; font-family:'Montserrat',sans-serif; background:var(--black); color:white; }
+        h1,h2 { font-family:'Playfair Display',serif; }
+        header {
+            position:fixed; top:0; width:100%; background:rgba(28,37,38,0.95);
+            backdrop-filter:blur(10px); z-index:1000; padding:15px 5%; display:flex;
+            justify-content:space-between; align-items:center; border-bottom:2px solid var(--silver);
+        }
+        .logo img { height:85px; transition:0.3s; }
+        .logo img:hover { transform:scale(1.12); }
+        nav a { color:white; text-decoration:none; margin:0 20px; font-weight:600; font-size:1.1em; transition:0.3s; }
+        nav a:hover, nav a.active { color:var(--gold); }
+        .section { padding:140px 10% 80px; text-align:center; }
+        form { max-width:800px; margin:0 auto; text-align:left; }
+        label { display:block; margin:15px 0 5px; font-weight:600; }
+        input, select, textarea { width:100%; padding:10px; background:rgba(255,255,255,0.1); border:1px solid var(--silver); color:white; border-radius:6px; }
+        .cta { background:var(--burgundy); color:white; padding:18px 40px; font-size:1.3rem; text-decoration:none; border-radius:6px; font-weight:bold; border:2px solid var(--gold); transition:0.3s; display:inline-block; margin-top:40px; cursor:pointer; }
+        .cta:hover { background:var(--gold); color:var(--black); }
+        footer { background:var(--charcoal); padding:50px 10%; text-align:center; border-top:2px solid var(--silver); }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="logo">
+        <img src="https://example.com/ironspar-logo.png" alt="Ironspar Logo">
+    </div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="products.html">Products</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact Us</a>
+        <a href="apply.html" class="active">Apply</a>
+    </nav>
+</header>
+
+<section class="section">
+    <h2>Submit Your Deal – Get Approved in 24 Hours</h2>
+    <p style="font-size:1.4rem; max-width:700px; margin:0 auto 40px;">Tell us about your project. We'll review and send a term sheet fast.</p>
+    
+    <form action="mailto:deals@ironspar.com" method="post" enctype="text/plain">
+        <label>Borrower Name</label>
+        <input type="text" name="Borrower Name" required>
+        
+        <label>Email</label>
+        <input type="email" name="Email" required>
+        
+        <label>Phone</label>
+        <input type="tel" name="Phone" required>
+        
+        <label>Loan Type</label>
+        <select name="Loan Type" required>
+            <option value="">Select...</option>
+            <option>Fix & Flip</option>
+            <option>Ground-Up Construction</option>
+            <option>Bridge Loan</option>
+            <option>Rental Property (DSCR)</option>
+        </select>
+        
+        <label>Property Address</label>
+        <input type="text" name="Property Address" required>
+        
+        <label>Purchase Price</label>
+        <input type="text" name="Purchase Price" required>
+        
+        <label>Rehab Budget (if applicable)</label>
+        <input type="text" name="Rehab Budget">
+        
+        <label>Estimated After Repair Value (ARV)</label>
+        <input type="text" name="Estimated ARV" required>
+        
+        <label>Experience (number of flips/completed projects)</label>
+        <input type="text" name="Experience">
+        
+        <label>Additional Details / Exit Strategy</label>
+        <textarea name="Additional Details" rows="5"></textarea>
+        
+        <button type="submit" class="cta">Submit Application</button>
+    </form>
+</section>
+
+<footer>
+    <p>© 2025 Ironspar Real Estate Co. • 17 Briar Brae Road, Darien, CT 06820 • (860) 381-7247</p>
+    <p>Licensed in all states except Alaska</p>
+</footer>
+
+</body>
+</html>
+

@@ -30,8 +30,19 @@
         .section { padding:140px 10% 80px; text-align:center; }
         .section h2 { font-size:3.5rem; margin-bottom:40px; }
         .about-text { font-size:1.4rem; max-width:900px; margin:0 auto 40px; line-height:1.9; }
-        .subsidiaries { display:flex; justify-content:center; flex-wrap:wrap; gap:40px; margin:60px auto; max-width:1200px; }
-        .subsidiary { flex:1; min-width:280px; background:rgba(255,255,255,0.05); padding:30px; border-radius:10px; border:1px solid var(--silver); }
+        .subsidiaries { 
+            display:flex; flex-direction:column; align-items:center; gap:60px; 
+            margin:60px auto; max-width:900px; 
+        }
+        .subsidiary { 
+            width:100%; max-width:800px; text-align:center;
+            background:rgba(255,255,255,0.05); padding:40px; border-radius:10px; 
+            border:1px solid var(--silver); 
+        }
+        .subsidiary img {
+            height:120px; margin-bottom:20px; filter: brightness(1.1); transition:0.3s;
+        }
+        .subsidiary img:hover { transform:scale(1.08); }
         .subsidiary h3 { font-size:2rem; color:var(--gold); margin-bottom:20px; }
         .cta {
             background:var(--burgundy); color:white; padding:18px 40px; font-size:1.3rem;
@@ -54,7 +65,9 @@
         <a href="index.html">Home</a>
         <a href="products.html">Products</a>
         <a href="about.html" class="active">About</a>
+        <a href="consultation.html">Consultation</a>
         <a href="contact.html">Contact Us</a>
+        <a href="apply.html">Apply</a>
     </nav>
 </header>
 
@@ -69,16 +82,19 @@
 
     <div class="subsidiaries">
         <div class="subsidiary">
+            <img src="pralle-realty-logo.png" alt="Pralle Realty Logo">
             <h3>Pralle Realty</h3>
             <p>Full-service real estate brokerage providing expert guidance for buying, selling, and managing residential 
             and commercial properties. We prioritize client success with personalized strategies and market expertise.</p>
         </div>
         <div class="subsidiary">
+            <img src="wizmar-investments-logo.png" alt="Wizmar Investments Logo">
             <h3>Wizmar Investments</h3>
             <p>Our investment arm focused on acquiring, developing, and managing high-potential real estate assets. 
             We create value through strategic acquisitions, renovations, and long-term portfolio growth.</p>
         </div>
         <div class="subsidiary">
+            <img src="athena-lending-logo.png" alt="Athena Lending Logo">
             <h3>Athena Lending</h3>
             <p>Private lending division offering fast, flexible financing for real estate deals that traditional banks 
             won’t touch. Speed, certainty, and minimal red tape for fix-and-flip, rental, and commercial projects.</p>

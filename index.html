@@ -3,10 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Athena Lending | Private Lending for Investors</title>
+    <title>Iron Athena Lending | Private Lending for Investors</title>
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
-    <!-- PayPal SDK -->
-    <script src="https://www.paypal.com/sdk/js?client-id=BAAxQ7ykg-LCkTudUhy5ew9YnJSdV6-241CczSvL2qis1fVP9_FPiL3jnJRvv7c--gKwJhiHzvanwkaoD0&components=hosted-buttons&enable-funding=venmo&currency=USD"></script>
     <style>
         :root {
             --charcoal: #1C2526;
@@ -15,44 +13,112 @@
             --gold: #D4AF37;
             --black: #000000;
         }
-        body { margin:0; font-family:'Montserrat',sans-serif; background:var(--black); color:white; }
-        h1,h2,h3 { font-family:'Playfair Display',serif; }
+        * { box-sizing: border-box; }
+        body { 
+            margin:0; 
+            font-family:'Montserrat',sans-serif; 
+            background:var(--black); 
+            color:white; 
+        }
+        h1,h2,h3 { font-family:'Playfair Display', serif; }
+        
         header {
-            position:fixed; top:0; width:100%; background:rgba(28,37,38,0.95);
-            backdrop-filter:blur(10px); z-index:1000; padding:15px 5%; display:flex;
-            justify-content:space-between; align-items:center; border-bottom:2px solid var(--silver);
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(28,37,38,0.95);
+            backdrop-filter: blur(10px);
+            z-index: 1000;
+            padding: 15px 5%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 2px solid var(--silver);
         }
-        .logo img { height:85px; transition:0.3s; }
-        .logo img:hover { transform:scale(1.12); }
+        .logo img {
+            height: 100px;
+            width: auto;
+            object-fit: contain;
+            transition: 0.3s;
+        }
+        .logo img:hover {
+            transform: scale(1.08);
+        }
         nav a {
-            color:white; text-decoration:none; margin:0 20px; font-weight:600; font-size:1.1em;
-            transition:0.3s;
+            color: white;
+            text-decoration: none;
+            margin: 0 20px;
+            font-weight: 600;
+            font-size: 1.1em;
+            transition: 0.3s;
         }
-        nav a:hover, nav a.active { color:var(--gold); }
+        nav a:hover, nav a.active {
+            color: var(--gold);
+        }
+
         .hero {
-            height:100vh; background:url('https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2100&q=80') center/cover;
-            display:flex; align-items:center; justify-content:center; text-align:center; position:relative;
+            height: 100vh;
+            background: url('https://images.unsplash.com/photo-1480714378408-67cf0d13bc1b?ixlib=rb-4.0.3&auto=format&fit=crop&w=2100&q=80') center/cover;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
         }
-        .hero::before { content:''; position:absolute; inset:0; background:rgba(0,0,0,0.7); }
-        .hero-content { position:relative; max-width:900px; padding:0 20px; }
-        .hero h1 { font-size:4.5rem; margin:0; }
-        .hero p { font-size:1.6rem; margin:30px 0; }
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: rgba(0,0,0,0.7);
+        }
+        .hero-content {
+            position: relative;
+            max-width: 900px;
+            padding: 0 20px;
+        }
+        .hero h1 { font-size: 4.5rem; margin: 0; }
+        .hero p { font-size: 1.8rem; font-weight: 600; margin: 30px 0; }
+
         .cta {
-            background:var(--burgundy); color:white; padding:18px 40px; font-size:1.3rem;
-            text-decoration:none; border-radius:6px; font-weight:bold; border:2px solid var(--gold);
-            transition:0.3s; display:inline-block; margin:15px;
+            background: var(--burgundy);
+            color: white;
+            padding: 18px 40px;
+            font-size: 1.3rem;
+            text-decoration: none;
+            border-radius: 6px;
+            font-weight: bold;
+            border: 2px solid var(--gold);
+            transition: 0.3s;
+            display: inline-block;
+            margin: 15px;
         }
-        .cta:hover { background:var(--gold); color:var(--black); }
-        .consultation-section {
-            padding:80px 10%; text-align:center; background:var(--charcoal);
+        .cta:hover {
+            background: var(--gold);
+            color: var(--black);
         }
-        .slogan {
-            font-style:italic; font-size:1.4rem; max-width:900px; margin:30px auto; line-height:1.6;
+
+        .section {
+            padding: 120px 10% 80px;
+            text-align: center;
+            background: var(--charcoal);
         }
-        .section { padding:120px 10% 80px; text-align:center; }
-        .section h2 { font-size:3rem; margin-bottom:30px; }
+        .section h2 {
+            font-size: 3rem;
+            margin-bottom: 30px;
+        }
+
         footer {
-            background:var(--charcoal); padding:50px 10%; text-align:center; border-top:2px solid var(--silver);
+            background: var(--charcoal);
+            padding: 50px 10%;
+            text-align: center;
+            border-top: 2px solid var(--silver);
+        }
+
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 3.2rem; }
+            .hero p { font-size: 1.4rem; }
+            nav a { margin: 0 12px; font-size: 1em; }
+            .logo img { height: 80px; }
         }
     </style>
 </head>
@@ -60,70 +126,33 @@
 
 <header>
     <div class="logo">
-        <img src="https://example.com/ironspar-logo.png" alt="Ironspar Logo">
+        <img src="images/iron-athena-lending-logo.png" alt="Iron Athena Lending Logo">
     </div>
     <nav>
         <a href="index.html" class="active">Home</a>
         <a href="products.html">Products</a>
         <a href="about.html">About</a>
+        <a href="consultation.html">Consultation</a>
         <a href="contact.html">Contact Us</a>
+        <a href="apply.html">Apply</a>
     </nav>
 </header>
 
 <section class="hero">
     <div class="hero-content">
-        <h1>Athena Lending</h1>
-        <p style="font-size:1.8rem; font-weight:600;">
+        <h1>Iron Athena Lending</h1>
+        <p>
             Private lender for New York real estate investors<br>
             Fix & Flip • Ground-Up Construction • Bridge • Rental Property Financing
         </p>
-        <a href="contact.html" class="cta">Get Approved in 24 Hours</a>
+        <a href="apply.html" class="cta">Get Approved in 24 Hours</a>
     </div>
 </section>
 
-<!-- Consultation Section -->
-<section class="consultation-section">
-    <h2 style="font-size:3rem;">Expert Consultation for Beginners</h2>
-    <p class="slogan">
-        For beginners, don't get ripped off by a general contractor. 
-        Consult a general. Make sure your investment philosophy is sound.
-    </p>
-
-    <!-- Sold Out Notice -->
-    <div style="position:relative; display:inline-block; margin:30px 0;">
-        <div style="
-            position:absolute; top:50%; left:50%; transform:translate(-50%,-50%);
-            background:rgba(128,0,32,0.9); color:white; padding:12px 40px;
-            font-size:1.8rem; font-weight:bold; border:3px solid var(--gold);
-            border-radius:8px; z-index:10; text-transform:uppercase;
-        ">
-            Sold Out
-        </div>
-        <div style="opacity:0.4; pointer-events:none;">
-            <div class="cta" style="font-size:1.5rem; padding:20px 50px; visibility:hidden;">
-                Pay Now – $2,500 Consultation
-            </div>
-        </div>
-    </div>
-
-    <p style="font-size:1.4rem; max-width:800px; margin:30px auto; opacity:0.9;">
-        <strong>Current consultation slots are fully booked.</strong><br>
-        High demand has led to all beginner consultation sessions being sold out at this time.<br><br>
-        <em>Payment is still available for serious investors on a waitlist or by special arrangement.</em>
-    </p>
-
-    <!-- Real PayPal Button -->
-    <div id="paypal-container-6BS7P4KW5NS2L"></div>
-
-    <p style="font-size:1.1rem; margin-top:25px; opacity:0.8;">
-        Payment confirms priority access when new slots open or for expedited private review.
-    </p>
-</section>
-
-<section class="section" style="background:var(--charcoal);">
+<section class="section">
     <h2>Capital Forged for Victory</h2>
     <p style="font-size:1.3rem; max-width:900px; margin:0 auto; line-height:1.8;">
-        Athena Lending is a boutique private lender specializing in fast, flexible hard money loans 
+        Iron Athena Lending is a boutique private lender specializing in fast, flexible hard money loans 
         for experienced real estate investors across New York and the Tri-State area. 
         Whether you’re flipping brownstones in Brooklyn, building ground-up in Queens, bridging to permanent financing, 
         or acquiring cash-flowing rentals, we deliver the speed and certainty banks can’t match.
@@ -131,17 +160,9 @@
 </section>
 
 <footer>
-    <p>© 2025 Pralle Real Estate Company • 17 Briar Brae Road, Darien, CT 06820 • (860) 381-7247</p>
+    <p>© 2026 Ironspar Real Estate Co. • 157 Columbus Avenue, New York, NY 10023 • (332) 252-6925</p>
     <p>Licensed in all states except Alaska</p>
 </footer>
 
-<script>
-  paypal.HostedButtons({
-    hostedButtonId: "6BS7P4KW5NS2L",
-  }).render("#paypal-container-6BS7P4KW5NS2L");
-</script>
-
 </body>
 </html>
-
-

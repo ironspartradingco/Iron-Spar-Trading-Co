@@ -107,11 +107,79 @@
             margin-bottom: 30px;
         }
 
-        footer {
-            background: var(--charcoal);
-            padding: 50px 10%;
+        /* Achievements / Stats Section */
+        .achievements {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin: 60px auto;
+            max-width: 1100px;
+        }
+        .stat-card {
+            background: rgba(255,255,255,0.05);
+            padding: 35px 25px;
+            border-radius: 10px;
+            border: 1px solid var(--silver);
+            min-width: 260px;
+            flex: 1 1 260px;
             text-align: center;
-            border-top: 2px solid var(--silver);
+            transition: transform 0.3s;
+        }
+        .stat-card:hover {
+            transform: translateY(-8px);
+        }
+        .stat-card h3 {
+            font-size: 3.2rem;
+            color: var(--gold);
+            margin: 0 0 8px;
+            line-height: 1;
+        }
+        .stat-card p {
+            font-size: 1.3rem;
+            margin: 0;
+            color: var(--silver);
+        }
+
+        /* Testimonials Section */
+        .testimonials {
+            max-width: 1000px;
+            margin: 80px auto 40px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 40px;
+        }
+        .testimonial {
+            flex: 1 1 300px;
+            background: rgba(255,255,255,0.05);
+            padding: 30px;
+            border-radius: 10px;
+            border: 1px solid var(--silver);
+            font-style: italic;
+            font-size: 1.3rem;
+            line-height: 1.7;
+            text-align: left;
+            position: relative;
+        }
+        .testimonial::before {
+            content: '“';
+            font-size: 6rem;
+            color: var(--gold);
+            opacity: 0.3;
+            position: absolute;
+            top: -20px;
+            left: 20px;
+            line-height: 1;
+        }
+        .testimonial cite {
+            display: block;
+            margin-top: 20px;
+            font-style: normal;
+            color: var(--gold);
+            font-weight: bold;
+            font-size: 1.1rem;
+            text-align: right;
         }
 
         @media (max-width: 768px) {
@@ -119,6 +187,9 @@
             .hero p { font-size: 1.4rem; }
             nav a { margin: 0 12px; font-size: 1em; }
             .logo img { height: 80px; }
+            .stat-card h3 { font-size: 2.5rem; }
+            .stat-card p { font-size: 1.1rem; }
+            .testimonials { flex-direction: column; gap: 30px; }
         }
     </style>
 </head>
@@ -150,12 +221,47 @@
 
 <section class="section">
     <h2>Capital Forged for Victory</h2>
-    <p style="font-size:1.3rem; max-width:900px; margin:0 auto; line-height:1.8;">
+    <p style="font-size:1.3rem; max-width:900px; margin:0 auto 40px; line-height:1.8;">
         Pralle Real Estate Company is a boutique private lender specializing in fast, flexible hard money loans 
         for experienced real estate investors across New York and the Tri-State area. 
         Whether you’re flipping brownstones in Brooklyn, building ground-up in Queens, bridging to permanent financing, 
         or acquiring cash-flowing rentals, we deliver the speed and certainty banks can’t match.
     </p>
+
+    <!-- Achievements / Funded Stats – focused on last 12 months -->
+    <div class="achievements">
+        <div class="stat-card">
+            <h3>$18M+</h3>
+            <p>funded in the last 12 months</p>
+        </div>
+        <div class="stat-card">
+            <h3>60+</h3>
+            <p>deals closed in the last 12 months</p>
+        </div>
+        <div class="stat-card">
+            <h3>< 10 days</h3>
+            <p>average time to funding</p>
+        </div>
+    </div>
+
+    <!-- Testimonials -->
+    <div class="testimonials">
+        <blockquote class="testimonial">
+            Pralle turned a tight deadline into reality — funded our $675K Brooklyn flip in just 7 days when the bank stalled. Professional, no-nonsense, and truly investor-focused.
+            <cite>— Alex T., Brooklyn Real Estate Investor (2025)</cite>
+        </blockquote>
+
+        <blockquote class="testimonial">
+            When every traditional lender turned us down on a time-sensitive flip, Pralle stepped in with fast approval and clear terms. We closed in 8 days and completed the project profitably. Real partners for serious investors.
+            <cite>— Michael R., Hartford Real Estate Investor (2024)</cite>
+        </blockquote>
+
+        <blockquote class="testimonial">
+            Banks dragged their feet on our multi-family rental acquisition, but Pralle delivered fast bridge financing with minimal hassle. The team understood our strategy and got us funded to secure the deal. Highly recommend for serious investors.
+            <cite>— Maria R., Tri-State Multi-Unit Investor (2025)</cite>
+        </blockquote>
+    </div>
+
 </section>
 
 <footer>
@@ -165,12 +271,3 @@
 
 </body>
 </html>
-
-
-
-
-
-
-
-
-
